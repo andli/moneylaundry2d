@@ -13,3 +13,11 @@ config_version=5
 config/name="Money Laundry"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+WindowManager="*res://window_manager.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
