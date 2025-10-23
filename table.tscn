@@ -1,34 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpaiyswjgfkvj"]
+[gd_scene load_steps=2 format=3 uid="uid://cpaiyswjgfkvj"]
 
-[ext_resource type="Texture2D" uid="uid://bu2ugov1wevda" path="res://textures/dollar-100.png" id="1_jd0nb"]
-[ext_resource type="Script" uid="uid://8dm5b67duvdl" path="res://bill.gd" id="1_v5i0k"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1emcc"]
+[ext_resource type="PackedScene" uid="uid://dvgm0o8unuiwa" path="res://bill.tscn" id="1_jd0nb"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Table" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Table"]
-polygon = PackedVector2Array(580, 477, 610, 1705, 2772, 1747, 2726, 475)
+position = Vector2(-1121, -789)
+polygon = PackedVector2Array(616, 517, 570, 1094, 1677, 1089, 1622, 525)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Bills" type="Node" parent="."]
 
+[node name="Bill" parent="Bills" instance=ExtResource("1_jd0nb")]
+position = Vector2(-106, -47)
+mass = 0.01
+
 [node name="Chute" type="Marker2D" parent="."]
 position = Vector2(1626, 76)
-
-[node name="Bill" type="RigidBody2D" parent="."]
-input_pickable = true
-gravity_scale = 0.0
-continuous_cd = 1
-linear_damp = 8.0
-angular_damp = 10.0
-script = ExtResource("1_v5i0k")
-
-[node name="Sprite2D" type="Sprite2D" parent="Bill"]
-texture = ExtResource("1_jd0nb")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bill"]
-shape = SubResource("RectangleShape2D_1emcc")

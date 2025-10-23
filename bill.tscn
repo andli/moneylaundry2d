@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvgm0o8unuiwa"]
+
+[ext_resource type="Script" uid="uid://8dm5b67duvdl" path="res://bill.gd" id="1_npx17"]
+[ext_resource type="Texture2D" uid="uid://bu2ugov1wevda" path="res://textures/dollar-100.png" id="2_43l7l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1emcc"]
+size = Vector2(178, 75)
+
+[node name="Bill" type="RigidBody2D"]
+input_pickable = true
+gravity_scale = 0.0
+continuous_cd = 1
+linear_damp = 8.0
+angular_damp = 10.0
+script = ExtResource("1_npx17")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_43l7l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_1emcc")
