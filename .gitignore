@@ -1,3 +1,38 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Godot-specific ignores
+.import/
+.export/
+.export-*
+*.import
+*.tmp
+*.log
+
+# OS-specific ignores
+.DS_Store
+Thumbs.db
+
+# User-specific project files
+*.cfg
+*.ini
+*.user
+*.editor
+
+# Godot build output
+bin/
+
+# VS Code settings (optional)
+.vscode/
+
+# Backup files
+*.bak
+*.old
+*.orig
+
+# Godot crash logs
+crash_dump*
+
+# Ignore Godot's lock file
+.project.lock
