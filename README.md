@@ -28,6 +28,8 @@ Your task:
 Delivering sorted, high-quality bills earns bonuses; sloppy bundles or counterfeit notes cause penalties.  
 If you fall behind and your table overflows, you lose.
 
+If cash falls off the table, it will end up in a special container that requires you to "sweep the floor" to get it up again, and bills may become dirty.
+
 ### Progression
 
 As you level up, you can spend your hard-earned cash to buy **tools and automation**:
